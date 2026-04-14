@@ -2,7 +2,7 @@
 
 Welcome to my digital portfolio! I am a professional seafarer navigating the world's oceans, currently bridging the gap between maritime logistics and modern AI technology.
 
-[Live Demo](https://yupyrioch1-stack.github.io/ppph-portfolio.github.io/)
+[Live Demo](https://ppph-portfolio.github.io/about/)
 
 ---
 
@@ -52,7 +52,7 @@ This portfolio features an interactive world map tracking my career journey acro
 Feel free to reach out for collaborations or maritime tech discussions:
 
 [![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/paingpyaephyoehein/)
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/959XXXXXXXXX)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/959420134455)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yupyrioch1-stack)
 
 ---
