@@ -20,7 +20,7 @@ body {
 
 .wrapper { max-width: 800px; width: 90%; padding: 60px 0; }
 
-.profile-title { font-size: 3rem; font-weight: 800; margin-bottom: 40px; }
+.profile-title { font-size: 3rem; font-weight: 800; margin-bottom: 10px; }
 .highlight { color: var(--accent-color); }
 .status-tag { 
     background: rgba(0, 212, 255, 0.2); 
@@ -64,91 +64,30 @@ body {
 .project-item { text-decoration: none; color: inherit; display: block; }
 .project-item:hover { border-color: var(--accent-color); transform: translateY(-5px); }
 
-/* Timeline Container */
-.timeline { 
-    position: relative;
-    padding-left: 40px; /* မျဉ်းကြောင်းနဲ့ စာသားကြား နေရာပိုချန်လိုက်တယ် */
-    margin: 40px 10px;
+.timeline { border-left: 2px solid var(--accent-color); padding-left: 25px; margin-left: 10px; }
+.timeline-item { position: relative; margin-bottom: 40px; }
+.timeline-item::before { 
+    content: ""; 
+    position: absolute; 
+    left: -31px; 
+    top: 5px; 
+    width: 10px; 
+    height: 10px; 
+    border-radius: 50%; 
+    background: var(--accent-color); 
+    box-shadow: 0 0 10px var(--accent-color); 
 }
-
-/* ၁။ ပင်မမျဉ်းကြောင်း (အမြဲတမ်းပေါ်နေမည့် line) */
-.timeline::before {
-    content: "";
-    position: absolute;
-    left: 4.5px; /* အလုံးလေးတွေရဲ့ အလယ်ဗဟိုမှာ ရှိနေအောင် ညှိထားတာ */
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: rgba(0, 212, 255, 0.15); /* အမှောင်လွှာ လိုင်းလေး */
-    z-index: 0;
-}
-
-/* ၂။ လှုပ်ရှားနေမည့် မျဉ်းကြောင်း (Animated line) */
-.timeline::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 4.5px;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(to bottom, transparent, var(--accent-color), transparent);
-    background-size: 100% 200%;
-    animation: moveLine 3s linear infinite;
-    z-index: 1;
-}
-
-@keyframes moveLine {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 0% 200%; }
-}
-
-/* ၃။ Timeline Item Style */
 .timeline-item {
-    position: relative;
-    margin-bottom: 10px;
-    transition: all 0.4s ease;
-    z-index: 2; /* မျဉ်းကြောင်းရဲ့ အပေါ်မှာ ရှိနေအောင် */
-}
-
-/* ၄။ Timeline အလုံးလေးများ (The Dots) */
-.timeline-item::before {
-    content: "";
-    position: absolute;
-    left: -40.5px; /* မျဉ်းကြောင်းနဲ့ ကွက်တိကျအောင် နေရာညှိထားတယ် */
-    top: 8px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #0b1218; /* Background အရောင်နဲ့ တူအောင် ထည့်ပေးပါ */
-    border: 2px solid var(--accent-color);
-    box-shadow: 0 0 10px var(--accent-color);
-    z-index: 3;
-}
-
-/* Hover Effect - Mouse တင်ရင် အလုံးလေး လင်းလာမယ် */
-.timeline-item:hover::before {
-    background: var(--accent-color);
-    box-shadow: 0 0 20px var(--accent-color);
-}
-
-/* Description စာသားများ */
-.timeline-item .time-desc {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    color: var(--text-dim);
-    margin: 0;
+    transition: 0.3s ease;
+    cursor: default;
 }
 
 .timeline-item:hover {
-    transform: translateX(10px);
+    transform: translateX(15px); /* Mouse တင်ရင် ညာဘက်ကို နည်းနည်း တိုးသွားမယ် */
 }
 
-.timeline-item:hover .time-desc {
-    max-height: 200px;
-    opacity: 1;
-    margin-top: 10px;
+.timeline-item:hover .highlight {
+    text-shadow: 0 0 10px var(--accent-color); /* နာမည်လေးတွေ ပိုလင်းလာမယ် */
 }
 .social-row a { color: var(--text-main); text-decoration: none; margin-right: 20px; font-size: 2.5rem; }
 .social-row a:hover { color: var(--accent-color); }
