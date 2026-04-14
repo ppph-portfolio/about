@@ -1,0 +1,95 @@
+:root {
+    --accent-color: #00d4ff; 
+    --text-main: #ffffff;
+    --text-dim: #cbd5e1;
+    --glass-bg: rgba(22, 33, 44, 0.75);
+}
+
+body {
+    background: linear-gradient(rgba(11, 18, 24, 0.8), rgba(11, 18, 24, 0.8)), 
+                url('https://images.unsplash.com/photo-1439405326854-014607f694d7?auto=format&fit=crop&w=1920&q=80');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper { max-width: 800px; width: 90%; padding: 60px 0; }
+
+.profile-title { font-size: 3rem; font-weight: 800; margin-bottom: 10px; }
+.highlight { color: var(--accent-color); }
+.status-tag { 
+    background: rgba(0, 212, 255, 0.2); 
+    color: var(--accent-color); 
+    padding: 5px 15px; 
+    border-radius: 20px; 
+    border: 1px solid var(--accent-color); 
+    font-size: 0.85rem; 
+}
+
+.section-title { 
+    font-size: 0.9rem; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    color: var(--accent-color); 
+    margin: 60px 0 25px; 
+    display: flex; 
+    align-items: center; 
+}
+
+.section-title::after { 
+    content: ""; 
+    flex: 1; 
+    height: 1px; 
+    background: rgba(255,255,255,0.1); 
+    margin-left: 20px; 
+}
+
+#map { height: 350px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 20px; }
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.project-item { text-decoration: none; color: inherit; display: block; }
+.project-item:hover { border-color: var(--accent-color); transform: translateY(-5px); }
+
+.timeline { border-left: 2px solid var(--accent-color); padding-left: 25px; margin-left: 10px; }
+.timeline-item { position: relative; margin-bottom: 40px; }
+.timeline-item::before { 
+    content: ""; 
+    position: absolute; 
+    left: -31px; 
+    top: 5px; 
+    width: 10px; 
+    height: 10px; 
+    border-radius: 50%; 
+    background: var(--accent-color); 
+    box-shadow: 0 0 10px var(--accent-color); 
+}
+.timeline-item {
+    transition: 0.3s ease;
+    cursor: default;
+}
+
+.timeline-item:hover {
+    transform: translateX(15px); /* Mouse တင်ရင် ညာဘက်ကို နည်းနည်း တိုးသွားမယ် */
+}
+
+.timeline-item:hover .highlight {
+    text-shadow: 0 0 10px var(--accent-color); /* နာမည်လေးတွေ ပိုလင်းလာမယ် */
+}
+.social-row a { color: var(--text-main); text-decoration: none; margin-right: 20px; font-size: 2.5rem; }
+.social-row a:hover { color: var(--accent-color); }
+
+footer { text-align: center; margin-top: 100px; color: var(--text-dim); font-size: 0.8rem; }
